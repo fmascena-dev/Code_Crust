@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+}
+
+header{
+    background-color: #D3BF36;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex; 
+    list-style: none;
+    gap: 10px;
+    font-family: 'Livvic', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+}
+
+main{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+}
