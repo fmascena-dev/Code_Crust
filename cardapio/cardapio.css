@@ -15,8 +15,7 @@ header {
   display: flex;
   align-items: center;
   z-index: 1;
-  position: fixed;
-  width: 100%;
+  position: relative;
 }
 nav {
   width: 100%;
@@ -34,65 +33,98 @@ li a {
   color: #000;
   font-weight: bolder;
 }
-
-
-.inicio {
-  background-image: url('/images/Home/pizza3.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-.inicio::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.inicio h1 {
-  color: #fff;
-  font-size: 3rem;
-  z-index: 1;
-  margin-top: 80px;
-}
 .logo {
-  z-index: 1;
-  width: 20rem;
-  height: 20rem;
-  margin-top: -80px;
+  margin-left: -50px;
+  margin-top: -120px;
+  z-index: 0;
 }
-.historia {
-  color: #fff;
+h1 {
+  color: #d3bf26;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: -10rem;
+  margin-bottom: 3rem;
+}
+.menu-cardapio {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; 
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.menu-cardapio .item {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+.menu-cardapio img {
+  width: 380px; 
+  height: 500px;
+  border-radius: 10px; 
+}
+.menu-cardapio p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff; 
+}
+.pizza-salgada {
+  background-color: #d3bf26;
+}
+.salgada {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 3rem 10rem;
+  padding: 2rem;
+  font-size: 1.4rem;
 }
-.historia h2 {
-  margin-bottom: 2rem;
+.sessao-pizza {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
 }
-.historia p {
-  margin: 0 2rem 1rem 2rem;
-  font-weight: 400;
-  font-size: 1.2rem;
+.sessao-pizza h3 {
+  font-weight: bolder;
 }
-.img-final img {
+.bebidas {
+  color: #d3bf26;
+  padding: 2rem;
+}
+.sessao-bebida {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.sessao-bebida h3 {
+  font-weight: bolder;
+}
+.sessao-bebida p {
+  font-weight: normal;
+  margin-top: 5px;
+}
+.sessao-doce {
+  background-color: #d3bf26;
+  padding: 2rem;
+}
+.pizza-doce {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.pizza-doce h3 {
+  font-weight: bolder;
+}
+.pizza-doce p {
+  font-weight: lighter;
+  margin-top: 5px;
+}
+.pessoal {
   width: 100%;
-  height: 450px;
-  object-fit: cover;
-  z-index: 0;
-  position: relative;
-  bottom: 0;
-  opacity: 30%;
+}
+.img-final {
+  width: 100%;
 }
 footer {
   background-color: #d3bf26;
@@ -149,7 +181,7 @@ footer {
 .contato p {
   font-size: 1.8rem;
   margin-right: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .contato img {
   width: 50px;
