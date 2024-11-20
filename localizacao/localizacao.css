@@ -90,12 +90,13 @@ li a {
   .map {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
   }
   
   .map img {
-    width: auto;
-    max-width: 40%;
-    margin-left: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   }
   
 /* Seção de pesquisa */
@@ -127,7 +128,7 @@ li a {
   }
   
   .search button {
-    background-color: #ffc800;
+    background-color: #d3bf26;
     color: #000;
     padding: 10px 20px;
     border: none;
@@ -139,7 +140,10 @@ li a {
 /* Seção de imagens */
 .pictures {
     display: flex;
-    padding: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
   
   .pictures .imagem-container {
