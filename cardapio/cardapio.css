@@ -18,6 +18,7 @@ header {
   z-index: 1;
   position: fixed;
 }
+
 nav {
   width: 100%;
   display: flex;
