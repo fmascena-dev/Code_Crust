@@ -2,40 +2,39 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/Home/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/Code_Crust/images/para-empresas/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="paraempresas.css">
+    <link rel="stylesheet" href="style_paraempresas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <title>Para Empresas</title>
   </head>
   <body>
     <header>
       <nav>
         <ul class="menu1">
-          <li><a href="/index.html">HOME</a></li>
-          <li><a href="/cardapio/cardapio.html">CARDÁPIO</a></li>
+          <li><a href="/Code_Crust/index.html">HOME</a></li>
+          <li><a href="/Code_Crust/faca-seu-evento/faca-seu-evento.html">CARDÁPIO</a></li>
           <li>
-            <a href="/para-empresas/para-empresas.html">PARA EMPRESAS</a>
+            <a href="/Code_Crust/para-empresas/para-empresas.html">PARA EMPRESAS</a>
           </li>
         </ul>
         <ul class="menu2">
           <li>
-            <a href="/faca-seu-evento/faca-seu-evento.html">FAÇA SEU EVENTO</a>
+            <a href="/Code_Crust/faca-seu-evento/faca-seu-evento.html">FAÇA SEU EVENTO</a>
           </li>
-          <li><a href="/reservas/reservas.html">RESERVAS</a></li>
-          <li><a href="/localizacao/localizacao.html">LOCALIZAÇÃO</a></li>
+          <li><a href="/Code_Crust/reservas/reservas.html">RESERVAS</a></li>
+          <li><a href="/Code_Crust/localizacao/localizacao.html">LOCALIZAÇÃO</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <div>
-          <img src="/images/Home/Logo.png" alt="" />
+      <section class="partecima">
+        <div class="logo">
+          <img src="/Code_Crust/images/para-empresas/logo.png" alt="" />
         </div>
         <div>
           <h1>
@@ -44,51 +43,54 @@
             deliciosas e transforme o dia a dia do seu time! 🍕✨"
           </h1>
         </div>
+      </section>
+      <section class="partecentral">
         <div>
           <img
-            src="/images/para-empresas/imagem1.png"
+            class="img1"
+            src="/Code_Crust/images/para-empresas/imagem1.png"
             alt="pizza com uma fatia sobre ela"
           />
         </div>
-        <div>
-          <form action="">
-            <h2>Cadastro</h2>
-            <label for="Empresa">Empresa:</label>
-            <input type="text" id="Empresa" required placeholder="Nome da Empresa" />
-            <label for="Responsável">Nome:</label>
-            <input type="text" id="Responsável" required placeholder="Responsável pelo cadastro"/>
-            <label for="Telefone">Telefone:</label>
-            <input type="tel" id="Telefone" required placeholder="Telefone" />
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" required placeholder="Email" />
-            <label for="Benefícios">Benefícios:</label>
-            <input type="text" id="Benefícios" required placeholder="Descrição dos benefícios"/>
-            <input type="submit" value="Enviar" />
-          </form>
-        </div>
-        <div>
-          <img src="/images/para-empresas/imagem2.png" alt="pizza caindo" />
-        </div>
-      </section>
+          <div class="formulario">
+            <form action="">
+              <h2>Cadastro</h2>
+              <label for="Empresa">Empresa:</label>
+              <input type="text" id="Empresa" required placeholder="Nome da Empresa" />
+              <label for="Responsável">Nome:</label>
+              <input type="text" id="Responsável" required placeholder="Responsável pelo cadastro"/>
+              <label for="Telefone">Telefone:</label>
+              <input type="tel" id="Telefone" required placeholder="Telefone" />
+              <label for="Email">Email:</label>
+              <input type="email" id="Email" required placeholder="Email" />
+              <label for="Benefícios">Benefícios:</label>
+              <input type="text" id="Benefícios" required placeholder="Descrição dos benefícios"/>
+              <input type="submit" value="Enviar" />
+            </form>
+          </div>
+          <div>
+            <img class="img2" src="/Code_Crust/images/para-empresas/imagem2.png" alt="pizza caindo" />
+          </div>
+        </section>
     </main>
-    <footer>
+    <footer class="rodapé">
       <section class="siga">
         <p>Siga nossas redes</p>
         <div class="redes-sociais">
           <a href="#"
             ><img
               class="instagram"
-              src="/images/RedesSociais/icons8-instagram-192.svg"
+              src="/Code_Crust/images/RedesSociais/icons8-instagram-192.svg"
               alt="Instagram"
           /></a>
           <a href="#"
             ><img
               class="facebook"
-              src="/images/RedesSociais/icons8-facebook-192.svg"
+              src="/Code_Crust/images/RedesSociais/icons8-facebook-192.svg"
               alt="Facebook"
           /></a>
           <a href="#"
-            ><img class="twitter" src="/images/RedesSociais/icons8-twitter-192.svg" alt="Twitter"
+            ><img class="twitter" src="/Code_Crust/images/RedesSociais/icons8-twitter-192.svg" alt="Twitter"
           /></a>
         </div>
       </section>
@@ -98,7 +100,7 @@
       </section>
       <section class="contato">
         <a href="#"
-          ><img class="whatsapp" src="/images/Home/whatsapp.png" alt="Whatsapp"
+          ><img class="whatsapp" src="/Code_Crust/images/Home/whatsapp.png" alt="Whatsapp"
         /></a>
         <p>67 99876-0003</p>
       </section>
