@@ -132,14 +132,16 @@ input[type="submit"]:hover{
 }
 
 .img1{
-   z-index: 0;
-   height: 70%;
-   object-fit: cover;
+    z-index: 0;
+    height: 70%;
+    object-fit: cover;
+    border: 1px solid red;
 }
 .img2{
-   z-index: 0;
-   height: 100%;
-   object-fit: cover;
+    z-index: 0;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid red;
 }
 
 .rodapé{
