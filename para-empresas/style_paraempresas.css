@@ -42,6 +42,7 @@ main{
     background-color: black;
     font-family:'Livvic', sans-serif;
     padding: 0;
+    display: flex;
 }
 
 h1{
@@ -49,8 +50,13 @@ h1{
     text-align: center;
     width: 60%;
     justify-content: center;
-    margin: 3rem;
-    padding: 4rem;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    margin-top: -6px;
+    margin-left: 40px;
+    margin-bottom: 70px;
+
 }
 
 
@@ -61,12 +67,6 @@ font-weight: bold;
 font-size: 30px;
 }
 
-.partecima {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
 
 .logo{
     z-index: 1;
@@ -74,25 +74,26 @@ font-size: 30px;
     height: 20rem;
     padding: 0;
     margin: 0;
-    margin-top: -200px;
+    margin-top: -130px;
 }
 
 .partecentral{
+    justify-content: center;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     z-index: 1;
-    margin: 0;
+    align-items: center;
 }
 
 .formulario form{
-    display: flex;
-    flex: 2;
+    display: flex; 
     background-color: white;
     flex-direction: column;
     align-items: center;
     width: 370px;
     height: 410px;
-    padding: 10px;
+    padding: 40px;
+    margin: 5px;
 }
 
 .formulario input{
@@ -135,13 +136,11 @@ input[type="submit"]:hover{
     z-index: 0;
     height: 70%;
     object-fit: cover;
-    border: 1px solid red;
 }
 .img2{
     z-index: 0;
     height: 100%;
     object-fit: cover;
-    border: 1px solid red;
 }
 
 .rodapé{
