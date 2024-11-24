@@ -32,17 +32,17 @@
       </nav>
     </header>
     <main>
-            <div> 
+      <div> 
         <img src="/images/Home/Logo.png" alt="" />
       </div>
-      <section class="container-principal"> 
-        <section class="search"> 
+      <section class="container-principal">
+        <section class="search">
           <h1>Localização</h1>
           <h3>TEM UMA CODE & CRUST PERTO DE VOCÊ</h3>
           <input type="text" placeholder="Digite seu CEP" />
           <button>Encontre uma loja</button>
-        </section>
-        <figure class="map"> 
+          <div></div> </section>
+        <figure class="map">
           <img src="/images/localizacao/mapa.png" alt="Mapa de Localização" />
         </figure>
       </section>
@@ -65,21 +65,23 @@
       <section class="siga">
         <p>Siga nossas redes</p>
         <div class="redes-sociais">
-          <a href="#"
-            ><img
+          <a href="#">
+            <img
               class="instagram"
               src="/images/RedesSociais/icons8-instagram-192.svg"
               alt="Instagram"
-          /></a>
-          <a href="#"
-            ><img
+            />
+          </a>
+          <a href="#">
+            <img
               class="facebook"
               src="/images/RedesSociais/icons8-facebook-192.svg"
               alt="Facebook"
-          /></a>
-          <a href="#"
-            ><img class="twitter" src="/images/RedesSociais/icons8-twitter-192.svg" alt="Twitter"
-          /></a>
+            />
+          </a>
+          <a href="#">
+            <img class="twitter" src="/images/RedesSociais/icons8-twitter-192.svg" alt="Twitter" />
+          </a>
         </div>
       </section>
       <section class="abertura">
@@ -87,11 +89,46 @@
         <p>Todos os direitos reservados.</p>
       </section>
       <section class="contato">
-        <a href="#"
-          ><img class="whatsapp" src="/images/Home/whatsapp.png" alt="Whatsapp"
-        /></a>
+        <a href="#">
+          <img class="whatsapp" src="/images/Home/whatsapp.png" alt="Whatsapp" />
+        </a>
         <p>67 99876-0003</p>
       </section>
     </footer>
+    <script>
+      // Função getBairroFromCEP (mesma do exemplo anterior)
+      function getBairroFromCEP(cep) {
+        const cepNumerico = cep.replace(/\D/g, '');
+        if (cepNumerico >= 79020000 && cepNumerico <= 79020001) {
+          return 'Centro';
+        } else if (cepNumerico >= 79002165 && cepNumerico <= 79002500) {
+          return 'Jardim dos Estados';
+        } else {
+          return null; 
+        }
+      }
+
+      const inputCEP = document.querySelector('.search input');
+      const buttonEncontrar = document.querySelector('.search button');
+      const divResultados = document.createElement('div');
+      document.querySelector('.search').appendChild(divResultados);
+
+      buttonEncontrar.addEventListener('click', () => {
+        const cep = inputCEP.value;
+        const bairro = getBairroFromCEP(cep);
+
+        if (bairro === 'Centro') {
+          divResultados.innerHTML = `
+            <p>Loja Centro: Av. Afonso Pena, 2024.</p>
+          `;
+        } else if (bairro === 'Jardim dos Estados') {
+          divResultados.innerHTML = `
+            <p>Loja Jardim dos Estados: Rua Euclides da Cunha, 3600.</p>
+          `;
+        } else {
+          divResultados.innerHTML = '<p>Não atendemos sua região.</p>';
+        }
+      });
+    </script>
   </body>
 </html>

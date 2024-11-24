@@ -22,63 +22,67 @@ header {
 }
 
 nav{
-width: 100%;
-display: flex;
-justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-
 nav ul {
   list-style: none;
   display: flex; 
   align-items: center; 
   gap: 20px; 
 }
-
 header nav ul li a {
   text-decoration: none;
-  color:   
- #000;
+  color: #000;
   font-weight: bold;
 }
-
 .menu2 {
-display: flex;
-padding: 10px;
-gap: 15px;
-margin: 0px 20px;
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  margin: 0px 20px;
 }
 li a {
-color: #000;
-font-weight: bolder;
+  color: #000;
+  font-weight: bolder;
 }
-
 .logo {
-  width: 40%;
- }
-
- .logo-container { /* Adicione uma classe ao contêiner da logo no HTML */
+  width: 35%;
+  margin-top: -50rm;
+  margin-left: -10rm;
+  z-index: 0;
+  }
+.logo-container { 
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding: 5px; 
+  border: none; 
 }
-
-.conteudo-principal {  
+.conteudo-principal {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Ajusta a altura do mapa e pesquisa */
+  align-items: stretch; 
   width: 100%;
-  max-width: 900px; /* Diminui a largura máxima do contêiner */
-  margin: 0 auto;
-  gap: 60px; /* Aumenta o espaçamento entre mapa e pesquisa */
-  padding: 40px;
+  max-width: 900px; 
+  gap: 60px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Seção do título e mapa (novo contêiner) */
+.container-mapa-titulo { 
+  display: flex;
+  align-items: flex-start; /* Alinha o título e o mapa no topo */
 }
 
 h1 {
-  color: #d3bf26;
-  text-align: left;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  background-color: #d3bf26; /* Cor de fundo amarela */
+  color: black; /* Cor do texto preta */
+  padding: 10px 20px; /* Adiciona espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
 }
-
+  
 h3 {
   color: white;
   text-align: left;
@@ -128,22 +132,29 @@ main {
   font-weight: bold;
 }
 
+.search div { 
+  margin-top: 10px; 
+  color: white; 
+  font-size: 1rem; 
+  display: block; /* Garante que o elemento seja exibido como bloco */
+}
+
 /* Seção do mapa */
 .map {
-width: 45%; 
-padding: 20px; 
+  width: 45%; 
+  padding: 20px; 
 }
 
 .map img {
-width: 100%;
-max-width: 400px;
-height: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
-  
+
 /* Seção de imagens */
 .pictures {
   display: flex;
-  margin-top: 40px
+  margin-top: 40px;
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 20px;
@@ -164,12 +175,13 @@ height: auto;
 
 /* Container principal */
 .container-principal {
-display: flex;
-width: 100%;
-justify-content: space-between; 
-align-items: center; 
+  display: flex;
+  width: 100%;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 0;
 }
-  
+
 /* Estilos do rodapé */
 footer {
   background-color: #d3bf26;
@@ -179,6 +191,7 @@ footer {
   position: relative;
   margin-top: -10px;
 }
+
 .siga {
   text-align: center;
   display: flex;
@@ -186,32 +199,39 @@ footer {
   gap: 0.5rem;
   margin-left: 20px;
 }
+
 .redes-sociais {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 3rem;
 }
+
 .siga p {
   margin-top: 0.8rem;
   font-size: 1.6rem;
 }
+
 .redes-sociais a {
   display: flex;
   align-items: center;
 }
+
 .instagram {
   width: 100%;
   height: 100%;
 }
+
 .facebook {
   width: 100%;
   height: 100%;
 }
+
 .twitter {
   width: 100%;
   height: 100%;
 }
+
 .abertura {
   text-align: center;
   display: flex;
@@ -220,16 +240,19 @@ footer {
   justify-content: center;
   font-size: 1.3rem;
 }
+
 .contato {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contato p {
   font-size: 1.8rem;
   margin-right: 20px;
   margin-bottom: 15px;
 }
+
 .contato img {
   width: 50px;
   height: 50px;
