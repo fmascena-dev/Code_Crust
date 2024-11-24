@@ -61,27 +61,6 @@ li a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid white;
-}
-
-/* Seção do título e mapa (novo contêiner) */
-.container-mapa-titulo { 
-  display: flex;
-  align-items: flex-start; /* Alinha o título e o mapa no topo */
-}
-h1 {
-  background-color: #d3bf26; /* Cor de fundo amarela */
-  color: black; /* Cor do texto preta */
-  padding: 10px 20px; /* Adiciona espaçamento interno */
-  text-align: left; /* Alinha o texto à esquerda */
-  width: 100%;
-  margin-top: -2rem;
-}
-h3 {
-  color: white;
-  padding: 10px 20px;
-  text-align: left;
-  font-size: small;
   }
 
 /* Seção de pesquisa */
@@ -91,8 +70,7 @@ h3 {
   align-items: center; 
   margin-top: 20px;
   width: 48%;
-  border:1px solid red;
-}
+  }
 .search h1 {
   background-color: #d3bf26; /* Cor de fundo amarela */
   color: black; /* Cor do texto preta */
@@ -100,6 +78,7 @@ h3 {
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 2rem;
+  width: 100%;
 }
 .search h3 {
   font-size: 1.5em;
@@ -154,15 +133,6 @@ h3 {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-/* Container principal */
-.container-principal {
-  display: flex;
-  width: 100%;
-  justify-content: space-between; 
-  align-items: center;
-  margin-top: 0;
 }
 
 /* Estilos do rodapé */
