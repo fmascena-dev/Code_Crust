@@ -109,6 +109,12 @@ li a {
   border: none;
   cursor: pointer;
 }
+.search div { /* Estiliza a div que contém os resultados */
+  margin-top: 10px; /* Espaçamento superior */
+  color: white; /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+
 /* Seção do mapa */
 .map {
   width: 45%; 
