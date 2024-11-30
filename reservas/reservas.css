@@ -73,14 +73,7 @@ h1 {
     text-align: center;
 }
 
-form {
-    display: flexbox;
-    flex-direction: column;
-    width: 100%; 
-}
-
 label {
-    margin-bottom: 20px;
     font-size: 2rem;
 }
 
@@ -90,14 +83,15 @@ input {
     background-color: white;
     color: inherit;
     width: 100%;
+    border-radius: 20px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 button {
     background-color: #d3bf26; 
     color: black;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
