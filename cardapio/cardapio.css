@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: 'Livvic', sans-serif;
   font-weight: bold;
+  scroll-behavior: smooth;
 }
 body {
   background-color: black;
@@ -13,19 +14,31 @@ body {
 header {
   background-color: #d3bf26;
   display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
   align-items: center;
   width: 100%;
-  z-index: 1;
   position: fixed;
+  z-index: 1;
 }
-
 nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.menu1,
-.menu2 {
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.menu2,
+.menu1 {
   display: flex;
   padding: 10px;
   gap: 15px;
@@ -37,7 +50,7 @@ li a {
 }
 .logo {
   width: 40%;
-  margin-top: -6rem;
+  margin-top: -4rem;
   margin-left: -4rem;
   z-index: 0;
 }

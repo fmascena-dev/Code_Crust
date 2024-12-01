@@ -16,9 +16,8 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
   align-items: center;
-  z-index: 1;
-  position: fixed;
   width: 100%;
+  position: fixed;
 }
 nav{
   width: 100%;
@@ -36,7 +35,7 @@ header nav ul li a {
   color: #000;
   font-weight: bold;
 }
-.menu2 {
+.menu2, .menu1 {
   display: flex;
   padding: 10px;
   gap: 15px;
