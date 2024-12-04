@@ -102,11 +102,18 @@ li a {
   margin-bottom: 10px; 
 }
 
-.search button {
+button {
   background-color: #d3bf26;
   color: #000;
   border: none;
   cursor: pointer;
+}
+
+button:hover{
+  background-color: transparent;
+  color: #FFF;
+  text-decoration: underline;
+  box-shadow: 0 0 10px 10px rgba(255, 255, 0, 1);
 }
 .search div { /* Estiliza a div que contém os resultados */
   margin-top: 10px; /* Espaçamento superior */

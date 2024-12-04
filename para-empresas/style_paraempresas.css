@@ -1,8 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Livvic', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Livvic', sans-serif;
 }
 
 header {
@@ -14,23 +14,24 @@ header {
   position: fixed;
   width: 100%;
 }
-nav{
+nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 nav ul {
   list-style: none;
-  display: flex; 
-  align-items: center; 
-  gap: 20px; 
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 header nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
 }
-.menu2, .menu1 {
+.menu2,
+.menu1 {
   display: flex;
   padding: 10px;
   gap: 15px;
@@ -41,106 +42,107 @@ li a {
   font-weight: bolder;
 }
 
-main{
-    background-color: black;
-    font-family:'Livvic', sans-serif;
-    padding: 40px;
-    display: flex;
-    width: 100%;
-    padding: 3rem 0;
+main {
+  background-color: black;
+  font-family: 'Livvic', sans-serif;
+  /* padding: 40px; */
+  display: flex;
+  width: 100%;
+  padding: 4rem 0;
 }
 
-h1{
-    color: white;
-    text-align: center;
-    width: 60%;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 90%;
-    margin-top: -6px;
-    margin-left: 40px;
-    margin-bottom: 70px;
-
+h1 {
+  color: white;
+  text-align: center;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 70px;
 }
 
-h2{
-color: #D3BF36;
-padding: 1rem;
-font-weight: bold;
-font-size: 30px;
+h2 {
+  color: #d3bf26;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }
 
-.logo{
-    z-index: 0;
-    width: 20rem;
-    height: 20rem;
-    margin-top: -140px;
-    margin-left: -60px;
+.logo {
+  z-index: 0;
+  width: 20rem;
+  height: 20rem;
+  margin-top: -130px;
+  margin-left: -60px;
 }
 
-.partecentral{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.partecentral {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.formulario form{
-    display: flex; 
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    width: 370px;
-    height: 450px;
-    padding: 40px;
-    margin: 5px;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
 }
 
-.formulario input{
-    background-color: #D3BF36;
-    width: 300px;
-    margin: 2px;
-    padding: 2px;
-    text-align: center;
-    border: none;
-    font-size: 18px;
+.formulario form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-label{
-padding: 2px;
-font-weight: lighter;
-text-align: center;
-color: #D3BF36;
+form input {
+  background-color: #d3bf26;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
 }
 
-submit{
-    padding: 2px;
+.formulario input::placeholder {
+  color: #000;
 }
 
-input[type="submit"]{
-    width: 100px;
-    margin: 1.5rem;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    padding: 5px;
-    color: black;
+button {
+  background-color: #d3bf26;
+  border: none;
+  width: 50%;
+  margin: 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  color: black;
 }
 
-input[type="submit"]:hover{
-    background-color: gold;
+button:hover {
+  background-color: transparent;
+  color: #FFF;
+  text-decoration: underline;
+  box-shadow: 0 0 10px 10px rgba(255, 255, 0, 1);
 }
 
-.img1{
-    height: 70%;
-    object-fit: cover;
+.img1 {
+  height: 70%;
+  object-fit: cover;
+  z-index: -1;
 }
-.img2{
-    z-index: 0;
-    height: 80%;
-    object-fit: cover;
+.img2 {
+  z-index: -1;
+  height: 80%;
+  object-fit: cover;
 }
 
 footer {
@@ -148,8 +150,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  position: relative;
-  margin-top: -10px;
   font-weight: bold;
 }
 .siga {
