@@ -179,31 +179,33 @@ beneficios.addEventListener("change", (event) => { // change só executa quando 
     let img1 = document.querySelector('.img1');
     let img2 = document.querySelector('.img2');
 
+    // Definindo dimensões fixas para as imagens para manter a estrutura da página
+    let fixedWidth = img1.width;
+    let fixedHeight = img1.height;
+
+    img1.style.width = fixedWidth + 'px';
+    img1.style.height = fixedHeight + 'px';
+    img2.style.width = fixedWidth + 'px';
+    img2.style.height = fixedHeight + 'px';
+
     function trocarImagens() {
-        // Salvando as configurações atuais das imagens
+        // Salvando as fontes das imagens
         let img1Src = img1.src;
         let img2Src = img2.src;
 
-        // Trocando as imagens
+        // Trocando as fontes das imagens
         img1.src = img2Src;
         img2.src = img1Src;
 
-        // Mantendo o estilo das imagens
-        let img1Style = window.getComputedStyle(img1);
-        let img2Style = window.getComputedStyle(img2);
-
-        img1.style.width = img2Style.width;
-        img1.style.height = img2Style.height;
-        img1.style.objectFit = img2Style.objectFit;
-        img1.style.zIndex = img2Style.zIndex;
-
-        img2.style.width = img1Style.width;
-        img2.style.height = img1Style.height;
-        img2.style.objectFit = img1Style.objectFit;
-        img2.style.zIndex = img1Style.zIndex;
+        // Mantendo as dimensões fixas após a troca
+        img1.style.width = fixedWidth + 'px';
+        img1.style.height = fixedHeight + 'px';
+        img2.style.width = fixedWidth + 'px';
+        img2.style.height = fixedHeight + 'px';
     }
 
-    setInterval(trocarImagens, 20000);
+    setInterval(trocarImagens, 5000);
 });
+
 
 
