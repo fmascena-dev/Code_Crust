@@ -90,6 +90,7 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 70%;
+  position: relative;
 }
 
 .formulario form {
@@ -97,14 +98,16 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0rem;
 }
 
 form input {
   background-color: #d3bf26;
   font-size: 1.2rem;
-  padding: 0.5rem;
+  text-align: center;
+  padding: 0.3rem;
   border-radius: 10px;
   width: 100%;
   border: none;
@@ -206,4 +209,46 @@ footer {
 .contato img {
   width: 50px;
   height: 50px;
+}
+
+
+
+/* ---------- Estilos dinâmicos ---------- */
+.required-popup::after {
+  content: "*Campo obrigatório";
+  color: black;
+  font-size: .80rem;
+  padding: .2rem .3rem;
+  width: auto;
+  display: block;
+  background-color: white;
+}
+
+input.error {
+  border: solid 2px #992020;
+  background-color: #CCBBBB;
+  color: #662020;
+}
+
+input.correct {
+  background-color: #BBCCBB;
+  border: solid 2px #206620;
+  color: #206620;
+}
+
+.visible {
+  display: block;
+}
+
+span{
+  color: #992020;
+  background-color: white;
+  display: none
+}
+
+.mensagem-sucesso {
+  display: none;
+  color: green;
+  font-size: 1rem;
+  margin-top: 1rem;
 }

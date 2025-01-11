@@ -10,6 +10,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
       rel="stylesheet"/>
+    <script src = "para_empresas.js" defer></script>
     <title>Para Empresas</title>
   </head>
   <body>
@@ -52,14 +53,30 @@
           </h1>
         </div>
           <div class="formulario">
-            <form action="">
+            <form id="formulario" action="">
               <h2>Cadastro</h2>
+              <label for="Empresa">*Empresa:</label>
               <input type="text" id="Empresa" required placeholder="Nome da Empresa" />
+              <span id="empresaHelper" class="helper-text"></span>
+              
+              <label for="Responsável">*Responsável:</label>
               <input type="text" id="Responsável" required placeholder="Responsável pelo cadastro"/>
+              <span id="responsavelHelper" class="helper-text"></span>
+              
+              <label for="Telefone">*Telefone:</label>
               <input type="tel" id="Telefone" required placeholder="Telefone" />
+              <span id="telefoneHelper" class="helper-text"></span>
+              
+              <label for="Email">*E-mail:</label>
               <input type="email" id="Email" required placeholder="Email" />
+              <span id="emailHelper" class="helper-text"></span>
+              
+              <label for="Benefícios">*Benefícios</label>
               <input type="text" id="Benefícios" required placeholder="Descrição dos benefícios"/>
+              <span id="beneficiosHelper" class="helper-text"></span>
+              
               <button type="submit">ENVIAR</button>
+              <div id="mensagem-sucesso" class="mensagem-sucesso"></div> 
             </form>
           </div>
         </section>
