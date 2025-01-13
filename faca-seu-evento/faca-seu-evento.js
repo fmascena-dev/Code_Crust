@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showError(inputElement, message) {
         const errorDiv = document.createElement('div');
         errorDiv.className = 'error-message';
-        errorDiv.style.color = 'red';
+        errorDiv.style.color = 'white';
         errorDiv.style.fontSize = '12px';
         errorDiv.style.marginTop = '4px';
         errorDiv.textContent = message;
