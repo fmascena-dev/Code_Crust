@@ -1,127 +1,155 @@
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('JS carregado');
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/Home/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="faca-seu-evento.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Faça o seu evento</title>
+  </head>
 
-    const form = document.querySelector('form');
-    const nomeInput = form.querySelector('input[placeholder="Nome Completo"]');
-    const emailInput = form.querySelector('input[placeholder="E-mail"]');
-    const telefoneInput = form.querySelector('input[placeholder="Telefone para contato"]');
-    const dataInput = form.querySelector('input[placeholder="Data do Evento"]');
-    const pessoasInput = form.querySelector('input[placeholder="Quantas pessoas?"]');
-    
-    const MAX_NOME_LENGTH = 50;
-    const MAX_EMAIL_LENGTH = 50;
+  <body>
+    <header>
+      <nav>
+        <ul class="menu1">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/cardapio/cardapio.html">CARDÁPIO</a></li>
+          <li><a href="/para-empresas/para-empresas.html">PARA EMPRESAS</a></li>
+        </ul>
+        <ul class="menu2">
+          <li><a href="faca-seu-evento.html">FAÇA SEU EVENTO</a></li>
+          <li><a href="/reservas/reservas.html">RESERVAS</a></li>
+          <li><a href="/localizacao/localizacao.html">LOCALIZAÇÃO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="logo">
+        <img src="/images/Home/Logo.png" alt="Logomarca da pizzaria" />
+      </div>
+      <section class="inicio">
+        <h1>Celebre com Sabor na Pizzaria Code & Crust!</h1>
+      </section>
+      <section class="bem-vindo">
+        <div>
+          <p>
+            Na <span>Pizzaria Code & Crust</span>, cada fatia
+            conta uma história e cada evento se transforma em uma experiência
+            especial. Nosso ambiente acolhedor e cardápio irresistível de pizzas
+            artesanais são o cenário perfeito para comemorar momentos
+            importantes com amigos e família.
+          </p>
+        </div>
+      </section>
 
-    function showError(inputElement, message) {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.style.color = 'red';
-        errorDiv.style.fontSize = '12px';
-        errorDiv.style.marginTop = '4px';
-        errorDiv.textContent = message;
-        removeError(inputElement);
-        inputElement.parentElement.appendChild(errorDiv);
-        inputElement.classList.add('erro');
-    }
+      <section class="eventos">
+        <div class="div-eventos">
+          <h2>Eventos Especiais na Pizzaria Code & Crust</h2>
+          <p>
+            Planejando uma festa de aniversário, uma reunião entre amigos ou até
+            mesmo uma comemoração íntima em família? Nosso espaço foi pensado
+            para acolher todos os tipos de celebrações! Oferecemos um ambiente
+            agradável, atendimento dedicado e um cardápio de dar água na boca.
+          </p>
+          <h3>O que oferecemos para seus eventos:</h3>
+          <ul>
+            <li>Espaço exclusivo para festas e reuniões;</li>
+            <li>Cardápios personalizados com pizzas, massas e bebidas;</li>
+            <li>Decoração especial (sob consulta);</li>
+            <li>Equipe pronta para atender suas necessidades;</li>
+            <li>Área infantil (opcional).</li>
+          </ul>
+          <p>
+            Seja qual for a ocasião, estamos prontos para fazer dela um momento
+            memorável com as melhores pizzas da cidade!
+          </p>
+        </div>
+      </section>
 
-    function removeError(inputElement) {
-        const existingError = inputElement.parentElement.querySelector('.error-message');
-        if (existingError) {
-            existingError.remove();
-        }
-        inputElement.classList.remove('erro');
-    }
-
-    
-    nomeInput.addEventListener('input', function (e) {
-        if (e.target.value.length > MAX_NOME_LENGTH) {
-            e.target.value = e.target.value.substring(0, MAX_NOME_LENGTH);
-            showError(e.target, `O nome não pode ter mais de ${MAX_NOME_LENGTH} caracteres.`);
-        } else if (e.target.value.trim() === '') {
-            showError(e.target, 'O nome é obrigatório.');
-        } else {
-            removeError(e.target);
-        }
-    });
-
-    
-    emailInput.addEventListener('input', function (e) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (e.target.value.length > MAX_EMAIL_LENGTH) {
-            e.target.value = e.target.value.substring(0, MAX_EMAIL_LENGTH);
-            showError(e.target, `O email não pode ter mais de ${MAX_EMAIL_LENGTH} caracteres.`);
-        } else if (!emailRegex.test(e.target.value)) {
-            showError(e.target, 'Digite um email válido.');
-        } else {
-            removeError(e.target);
-        }
-    });
-
-    
-    telefoneInput.addEventListener('input', function (e) {
-        let numero = e.target.value.replace(/\D/g, '');  // Remove todos os caracteres não numéricos
-        if (numero.length !== 11) {  // Verifica se o telefone tem exatamente 11 dígitos
-            showError(e.target, 'O telefone deve conter 11 dígitos (DDD + celular).');
-        } else {
-            removeError(e.target);
-        }
-
-        
-        if (numero.length === 11) {
-            numero = numero.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
-        }
-
-        e.target.value = numero;
-    });
-
-    
-    const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
-    const dataMaxima = new Date('2032-12-31T23:59:59');
-   
-    dataInput.min = hoje.toISOString().split('T')[0];
-    dataInput.max = dataMaxima.toISOString().split('T')[0];
-
-    dataInput.addEventListener('change', function (e) {
-        const dataSelecionada = new Date(e.target.value);
-        if (dataSelecionada < hoje) { 
-            showError(e.target, 'A data não pode ser anterior à data atual.');
-        } else if (dataSelecionada > dataMaxima) {  
-            showError(e.target, 'A data não pode ser posterior a 31/12/2032.');
-        } else {
-            removeError(e.target);
-        }
-    });
-
-    
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();  
-        const campos = form.querySelectorAll('input[required]');
-        let valido = true;
-        campos.forEach(campo => {
-            if (!campo.value.trim()) {
-                showError(campo, 'Este campo é obrigatório.');
-                valido = false;
-            }
-        });
-
-        const temErros = document.querySelectorAll('.error-message').length > 0;
-        if (valido && !temErros) {
-            const formData = new FormData(form);
-            const reserva = Object.fromEntries(formData.entries());
-            if (confirm('Confirmar reserva com os seguintes dados?\n' +
-                `Nome: ${reserva['Nome Completo']}\n` +
-                `Email: ${reserva['E-mail']}\n` +
-                `Telefone: ${reserva['Telefone para contato']}\n` +
-                `Data: ${reserva['Data do Evento']}\n` +
-                `Pessoas: ${reserva['Quantas pessoas?']}`)) {
-                alert('Reserva agendada com sucesso! Aguarde o contato de nossa equipe!');
-                form.reset();  // Limpa o formulário
-                document.querySelectorAll('.error-message').forEach(msg => msg.remove()); 
-            }
-        } else {
-            alert('Por favor, corrija os erros antes de enviar.');
-        }
-    });
-});
-</script>
+      <section class="form-container">
+        <div class="div-form">
+          <h3>Preencha o Formulário para Reservar seu Evento</h3>
+          <p>Interessado em celebrar conosco? Preencha o formulário abaixo com suas informações, e nossa equipe entrará em contato rapidamente para planejar todos os detalhes e garantir que sua festa seja do jeito que você sonhou.</p>
+          <h3>Formulário de Reserva de Evento</h3>
+          <form action="#" method="post">
+            <input
+              type="text"
+              placeholder="Nome Completo"
+              required
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Telefone para contato"
+              required
+            />
+            <input
+              type="date"
+              placeholder="Data do Evento"
+              required
+            />
+            <input
+              type="number"
+              placeholder="Quantas pessoas?"
+              required
+            />
+            <button type="submit">Reservar</button>
+          </form>
+        </div>
+      </section>
+      <div class="paragrafo">
+        <p>
+          Assim que o formulário for enviado, nossa equipe entrará em contato
+          para confirmar todos os detalhes e garantir que sua festa seja
+          inesquecível.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <section class="siga">
+        <p>Siga nossas redes</p>
+        <div class="redes-sociais">
+          <a href="#"
+            ><img
+              class="instagram"
+              src="/images/RedesSociais/icons8-instagram-192.svg"
+              alt="Instagram"
+          /></a>
+          <a href="#"
+            ><img
+              class="facebook"
+              src="/images/RedesSociais/icons8-facebook-192.svg"
+              alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img
+              class="twitter"
+              src="/images/RedesSociais/icons8-twitter-192.svg"
+              alt="Twitter"
+          /></a>
+        </div>
+      </section>
+      <section class="abertura">
+        <p>Aberto de terça à domingo, das 18h às 23h.</p>
+        <p>Todos os direitos reservados.</p>
+      </section>
+      <section class="contato">
+        <a href="#"
+          ><img class="whatsapp" src="/images/Home/whatsapp.png" alt="Whatsapp"
+        /></a>
+        <p>67 99876-0003</p>
+      </section>
+    </footer>
+  </body>
+  <script src="faca-seu-evento.js"></script>
+</html>
