@@ -5,3 +5,97 @@
   font-family: 'Livvic', sans-serif;
   font-weight: bold;
 }
+
+body {
+  background: #010101;
+  color: #e1e1e1;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
+  align-items: center;
+}
+
+.creators-intro {
+  width: 70%;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.creators-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 60%;
+  padding: 2rem;
+  border: 2px solid #d3bf26;  
+  background-color: #111;
+  transition: transform 0.3s ease-in-out;
+}
+
+.creators-section:nth-child(odd) {
+  align-self: flex-start;
+  flex-direction: row;
+  border-radius: 11rem 0.8rem 0.8rem 11rem;
+}
+
+.creators-section:nth-child(even) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+  border-radius: 0.8rem 11rem 11rem 0.8rem;
+}
+
+.creators-img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border: 3px solid #d3bf26;
+}
+
+.creators-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.creators-cards:nth-child(odd) {
+  align-self: flex-start;
+  flex-direction: row;
+}
+
+.creators-cards:nth-child(even) {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+figcaption a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  padding: 0.4rem 1rem;
+  gap: 0.5rem;
+  border: 1px solid #d3bf26;
+  border-radius: 0.8rem;
+  color: #e1e1e1;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+figcaption a:hover {
+  background: transparent;
+  box-shadow: 1px 1px 10px 5px rgba(211, 191, 38, 0.5);
+}
