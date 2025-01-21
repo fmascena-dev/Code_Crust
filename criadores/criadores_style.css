@@ -8,7 +8,7 @@
 
 body {
   background: #010101;
-  color: #e1e1e1;
+  color: #d3bf26;
   overflow-x: hidden;
 }
 
@@ -81,6 +81,10 @@ figcaption {
   gap: 1rem;
 }
 
+figcaption .contato {
+  font-size: 1.2rem;
+}
+
 figcaption a {
   display: flex;
   align-items: center;
@@ -97,5 +101,5 @@ figcaption a {
 
 figcaption a:hover {
   background: transparent;
-  box-shadow: 1px 1px 10px 5px rgba(211, 191, 38, 0.5);
+  box-shadow: 1px 1px 10px 5px rgba(211, 191, 38, 0.75);
 }
