@@ -20,14 +20,14 @@ let beneficiosLabel = document.querySelector('label[for="Benefícios"]');
 let beneficiosHelper = document.getElementById("beneficiosHelper");
 
 //-------------------------------------------------------------------EMPRESA
-// Mostrar popup de campo obrigatório
+/* // Mostrar popup de campo obrigatório
     empresa.addEventListener("focus", () => { 
     empresaLabel.classList.add("required-popup")                     //adicionando a classe
 });
 // Ocultar popup de campo obrigatório
 empresa.addEventListener("blur", () => {
     empresaLabel.classList.remove("required-popup")                     //adicionando a classe
-});
+}); */
 
 empresa.addEventListener("change", (event) => {                       //change só executa quando você clica fora, capturar o valor
     let valor = event.target.value
@@ -53,14 +53,14 @@ empresa.addEventListener("change", (event) => {                       //change s
 });
 
 //--------------------------------------------------------------NOME DO SOLICITANTE
-// Mostrar popup de campo obrigatório
+/* // Mostrar popup de campo obrigatório
 responsavel.addEventListener("focus", () => { 
     responsavelLabel.classList.add("required-popup")                     //adicionando a classe
 });
 // Ocultar popup de campo obrigatório
 responsavel.addEventListener("blur", () => {
     responsavelLabel.classList.remove("required-popup")                     //adicionando a classe
-});
+}); */
 // Validar valor do input
 responsavel.addEventListener("change", (event) => {                       //change só executa quando você clica fora, capturar o valor
     let valor = event.target.value
@@ -85,7 +85,7 @@ responsavel.addEventListener("change", (event) => {                       //chan
 });
 
 //-------------------------------------------------------------------TELEFONE
-// Mostrar popup de campo obrigatório
+/* // Mostrar popup de campo obrigatório
 telefone.addEventListener("focus", () => { 
     telefoneLabel.classList.add("required-popup"); // adicionando a classe
 });
@@ -93,7 +93,7 @@ telefone.addEventListener("focus", () => {
 // Ocultar popup de campo obrigatório
 telefone.addEventListener("blur", () => {
     telefoneLabel.classList.remove("required-popup"); // removendo a classe
-});
+}); */
 
 // Validar valor do input
 telefone.addEventListener("change", (event) => { // change só executa quando você clica fora, capturar o valor
@@ -119,7 +119,7 @@ telefone.addEventListener("change", (event) => { // change só executa quando vo
 });
 
 //------------------------------------------------------------Email
-// Mostrar popup de campo obrigatório
+/* // Mostrar popup de campo obrigatório
 email.addEventListener("focus", () => { 
     emailLabel.classList.add("required-popup"); // adicionando a classe
 });
@@ -127,7 +127,7 @@ email.addEventListener("focus", () => {
 // Ocultar popup de campo obrigatório
 email.addEventListener("blur", () => {
     emailLabel.classList.remove("required-popup"); // removendo a classe
-});
+}); */
 
 // Validar valor do input
 email.addEventListener("change", (event) => { // change só executa quando você clica fora, capturar o valor
@@ -148,7 +148,7 @@ email.addEventListener("change", (event) => { // change só executa quando você
 
 
 //-------------------------------------------------------------Benefícios
-// Mostrar popup de campo obrigatório
+/* // Mostrar popup de campo obrigatório
 beneficios.addEventListener("focus", () => { 
     beneficiosLabel.classList.add("required-popup"); // adicionando a classe
 });
@@ -156,7 +156,7 @@ beneficios.addEventListener("focus", () => {
 // Ocultar popup de campo obrigatório
 beneficios.addEventListener("blur", () => {
     beneficiosLabel.classList.remove("required-popup"); // removendo a classe
-});
+}); */
 
 // Validar valor do input
 beneficios.addEventListener("change", (event) => { // change só executa quando você clica fora, capturar o valor
